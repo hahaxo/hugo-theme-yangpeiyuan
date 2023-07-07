@@ -1,0 +1,13 @@
+<div class="social">
+    {{ with .Site.Params.social }}
+  {{ range sort . "weight" }}
+    {{ if .icon }}
+        <a class="icon-link icon-link-hover" href="{{ .url | safeURL }}" aria-label="{{ .name }}" {{ if .rel }}rel="{{ .rel }}"{{ end }} {{ if .target }}target="{{- .target -}}"{{ end }} {{ if .type }}type="{{ .type }}"{{ end }}>
+          {{- .icon | safeHTML -}}
+        </a>
+    {{ else }}
+        <a class="icon-link icon-link-hover" href="{{ .url | safeURL }}" aria-label="{{ .name }}" {{ if .rel }}rel="{{ .rel }}"{{ end }} {{ if .target }}target="{{ .target }}"{{ end }}>{{ .name }}</a>
+    {{ end }}
+  {{ end }}
+{{ end }}
+</div>

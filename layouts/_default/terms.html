@@ -1,0 +1,15 @@
+{{ define "main" }}
+<div class="container">
+    <div class="tags">
+      {{ $data := .Data }}
+      {{ range $key, $value := .Data.Terms.ByCount }}
+          {{ if ($value.Name) }}
+              <a class="tag text-break " href="{{ "tags/" | relURL }}{{ $value.Name | urlize }}">
+                  <span>{{ $value.Name | upper }}</span>
+                  <span class="count">({{ $value.Count }})</span>
+              </a>
+          {{ end }}
+      {{ end }}
+</div>
+</div>
+{{ end }}

@@ -1,0 +1,27 @@
+   <!-- header -->
+   <header class="container-fluid">
+    <div class="container">
+      <div class="d-flex py-5 user_info">
+        <div class="logo flex-shrink-0">
+          <img width="150" height="150" src="{{.Site.Params.Avatar}}" />
+        </div>
+        <div class="flex-grow-1" style="margin-left: 2rem">
+          <h1>{{ .Site.Title }}</h1>
+          <div class="bio">{{.Site.Params.Bio}}</div>
+          {{- partial "social.html" . -}}
+        </div>
+      </div>
+      <nav>
+        <ul class="d-flex list-unstyled">
+          {{- $currentPage := . -}}
+            {{- with .Site.Menus.main -}}
+            {{- range $index, $value := . -}}
+            {{- $menu_item_url := .URL | relLangURL -}}
+            {{- $page_url:= $currentPage.RelPermalink | relLangURL }}
+          <li><a {{ if eq $menu_item_url $page_url -}}class="active"{{- end }} href="{{ .URL | relURL }}">{{ .Name }}</a></li>
+          {{- end -}}
+          {{ end -}}
+        </ul>
+      </nav>
+    </div>
+</header>

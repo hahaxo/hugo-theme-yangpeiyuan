@@ -1,0 +1,31 @@
+{{ define "main" }}
+<div class="container">
+    <div class="post_list">
+
+   {{ range .Paginator.Pages }}
+        {{ $title := .Title }}
+        {{ $summary := .Summary }}
+        
+
+        <article>
+            <h2><a class="link-reset hover:bs-emphasis-color" href="{{ .RelPermalink }}">{{ $title }}</a></h2>
+            <div class="meta"><time datetime="{{ .PublishDate }}">{{ i18n "publishDate" . }}</time>
+                {{ with .Params.tags }}
+                {{ range . }}
+                <a href="{{ "tags/" | absURL }}{{ . | urlize }}" class="link-reset hover:bs-secondary-color">#{{ . }}</a>
+                {{ end }}
+                {{ end }}
+            </div>
+                {{ if ne .Site.Params.hiddenPostSummaryInHomePage true }}
+                <div class="excerpt">{{ $summary | plainify | htmlUnescape }}</div>
+                {{ end }}
+          </article>
+
+
+    {{ end }}
+
+
+    </div>
+</div>
+
+{{ end }}
