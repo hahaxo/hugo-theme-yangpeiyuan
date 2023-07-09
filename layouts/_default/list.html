@@ -5,7 +5,7 @@
       <h3>{{ .Key }}</h3>
       <ul class="list-unstyled">
       {{ range .Pages }}
-        <li><time datetime="{{ .PublishDate }}">{{ i18n "publishDateShort" . }}</time><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+        <li><time datetime="{{ .PublishDate }}">{{ i18n "publishDateShort" . }}</time><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
     {{ end }}
       </ul>
       {{ end }}
