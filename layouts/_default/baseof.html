@@ -3,6 +3,7 @@
 <head>
 <title>{{ block "title" . }}{{ with .Params.Title }}{{ . }} | {{ end }}{{ .Site.Title }}{{ end }}</title>
 {{ partial "head.html" . -}}
+{{- block "markdownCss" . }}{{- end }}
 </head>
 
     <body>

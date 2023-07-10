@@ -125,7 +125,7 @@ header li {
 .social a:link,
 .social a:visited {
   color: var(--bs-secondary-color);
-  margin-right: 0.25rem;
+  margin-right: 0.75rem;
 }
 .social a:hover {
   color: var(--bs-secondary-color);
@@ -241,7 +241,6 @@ header nav li a.active:after {
 
 /* article */
 .article header nav a{ padding: .75rem .5rem;}
-.markdown-body{ margin: 2rem 0;}
 
 .article{ position: relative;}
 .article .toc{ position: absolute; top: 0; left: 100%; padding-left: 8rem; height: 100%; min-width: 16rem;}
@@ -249,7 +248,8 @@ header nav li a.active:after {
 .article .toc a{ color: var(--bs-tertiary-color); text-decoration: none; line-height: 200%;}
 .article .toc a:hover{ color: var(--ypy-primary); text-decoration: underline;}
 #TableOfContents ul,#TableOfContents li{ list-style-type: none;}
-.markdown-body{ line-height: 180%;}
+.markdown-body{ margin: 2rem 0 !important;}
+.markdown-body{ line-height: 180% !important; background-color: var(--bs-body-bg) !important;}
 
 
 
