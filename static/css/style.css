@@ -251,6 +251,10 @@ header nav li a.active:after {
 .markdown-body{ margin: 2rem 0 !important;}
 .markdown-body{ line-height: 180% !important; background-color: var(--bs-body-bg) !important;}
 
+@media (max-width: 1200px){
+  aside.toc{ display: none;}
+}
+
 
 
 
