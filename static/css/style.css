@@ -9,9 +9,6 @@
   --ypy-primary-bg: #333;
 }
 
-
-
-
 ::before,
 ::after {
   --tw-content: "";
@@ -189,8 +186,6 @@ header nav li a.active {
   color: var(--ypy-primary);
 }
 
-
-
 header nav li a.active:after {
   background-color: var(--ypy-primary);
   left: 0.5rem;
@@ -201,17 +196,18 @@ header nav li a.active:after {
 .post_list article {
   margin-bottom: 5rem;
 }
-.post_list h2,.article h1.title{
-  font-family: Noto Serif SC, ui-serif, Georgia, Cambria, times new roman, Times,
-    serif;
-    font-weight: 700;
-    
+.post_list h2,
+.article h1.title {
+  font-family: Noto Serif SC, ui-serif, Georgia, Cambria, times new roman, Times, serif;
+  font-weight: 700;
 }
- .meta {
+.meta {
   font-size: 0.875rem;
   color: var(--bs-tertiary-color);
 }
-.meta time{ margin-right: 1rem;}
+.meta time {
+  margin-right: 1rem;
+}
 .meta a {
   margin: 0 0.25rem;
 }
@@ -221,58 +217,109 @@ header nav li a.active:after {
   color: var(--bs-secondary-color);
 }
 
-
-
-
 /* archives */
-.archives li{ padding: .5rem; display: flex; }
-.archives time{ color: var(--bs-tertiary-color);flex:0 0 5rem }
-.archives a{ flex:1 1 auto }
-
-.archives li:hover{ background-color: var(--ypy-primary-bg);border-radius: .5rem; }
-.archives li:hover a{ color: var(--bs-body-color); }
-.archives a{ color: var(--bs-secondary-color); text-decoration: none;display: block;  }
-
-
-/* tags */
-.tags{ line-height: 180%;}
-.tags a{ margin-right: 1.75rem; display: inline-block; text-decoration: none;}
-.tags .count{ color: var(--bs-tertiary-color);}
-
-/* article */
-.article header nav a{ padding: .75rem .5rem;}
-
-.article{ position: relative;}
-.article .toc{ position: absolute; top: 0; left: 100%; padding-left: 8rem; height: 100%; min-width: 16rem;color: var(--bs-tertiary-color);}
-.article .toc .sticky{ position: sticky; top: 5rem;}
-.article .toc a{ color: var(--bs-tertiary-color); text-decoration: none; line-height: 200%;}
-.article .toc a:hover{ color: var(--ypy-primary); text-decoration: underline;}
-#TableOfContents ul,#TableOfContents li{ list-style-type: none;}
-.markdown-body{ margin: 2rem 0 !important;}
-.markdown-body{ line-height: 180% !important; background-color: var(--bs-body-bg) !important;}
-
-@media (max-width: 1200px){
-  aside.toc{ display: none;}
+.archives li {
+  padding: 0.5rem;
+  display: flex;
+}
+.archives time {
+  color: var(--bs-tertiary-color);
+  flex: 0 0 5rem;
+}
+.archives a {
+  flex: 1 1 auto;
 }
 
+.archives li:hover {
+  background-color: var(--ypy-primary-bg);
+  border-radius: 0.5rem;
+}
+.archives li:hover a {
+  color: var(--bs-body-color);
+}
+.archives a {
+  color: var(--bs-secondary-color);
+  text-decoration: none;
+  display: block;
+}
 
+/* tags */
+.tags {
+  line-height: 180%;
+}
+.tags a {
+  margin-right: 1.75rem;
+  display: inline-block;
+  text-decoration: none;
+}
+.tags .count {
+  color: var(--bs-tertiary-color);
+}
 
+/* article */
+.articlenav a {
+  padding: 0.75rem 0.5rem;
+}
+
+.article {
+  position: relative;
+}
+.article .toc {
+  position: absolute;
+  top: 0;
+  left: 100%;
+  padding-left: 8rem;
+  height: 100%;
+  min-width: 16rem;
+  color: var(--bs-tertiary-color);
+}
+.article .toc .sticky {
+  position: sticky;
+  top: 5rem;
+}
+.article .toc a {
+  color: var(--bs-tertiary-color);
+  text-decoration: none;
+  line-height: 200%;
+}
+.article .toc a:hover {
+  color: var(--ypy-primary);
+  text-decoration: underline;
+}
+#TableOfContents ul,
+#TableOfContents li {
+  list-style-type: none;
+}
+.markdown-body {
+  margin: 2rem 0 !important;
+}
+.markdown-body {
+  line-height: 180% !important;
+  background-color: var(--bs-body-bg) !important;
+}
+
+@media (max-width: 1200px) {
+  aside.toc {
+    display: none;
+  }
+}
 
 /* footer */
 footer {
-  margin: 6rem 0 1rem;color: var(--bs-gray-400);font-size: .875rem;
+  margin: 6rem 0 1rem;
+  color: var(--bs-gray-400);
+  font-size: 0.875rem;
 }
 footer .container-fluid {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  
 }
 footer span {
   display: block;
 }
 
-
-
 /* Comment */
-#comment { padding-top: 6rem;}
+#comment {
+  padding-top: 6rem;
+}
