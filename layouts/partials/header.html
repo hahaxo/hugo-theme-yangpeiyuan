@@ -25,12 +25,7 @@
     {{- range $index, $value := . -}}
       {{- $menu_item_url := .URL | relLangURL -}}
       {{- $page_url:= $currentPage.RelPermalink | relLangURL }}
-      <li><a
-          {{ if eq $menu_item_url $page_url }}class="active"{{ end }}
-          href="{{- .URL | relURL -}}"
-          {{ if .Params.target }}target="{{ .Params.target -}}"{{ end -}}>
-          {{- .Name -}}</a>
-      </li>
+      <li><a {{ if eq $menu_item_url $page_url }}class="active"{{ end }} href="{{- .URL | relURL -}}" {{ if .Params.target }}target="{{ .Params.target -}}"{{ end -}}> {{- .Name -}}</a></li>
     {{- end -}}
   {{ end -}}
   </ul>
