@@ -1,17 +1,17 @@
 /* reset bootstrap */
 :root,
-[data-bs-theme="light"] {
+[data-bs-theme='light'] {
   --ypy-primary: #00a5b0;
   --ypy-primary-bg: #daf6f9;
 }
-[data-bs-theme="dark"] {
+[data-bs-theme='dark'] {
   --ypy-primary: #00a5b0;
   --ypy-primary-bg: #333;
 }
 
 ::before,
 ::after {
-  --tw-content: "";
+  --tw-content: '';
 }
 a {
   color: var(--ypy-primary);
@@ -147,11 +147,14 @@ header li {
   }
 }
 
+header nav {
+  font-size: 0.75rem;
+}
 header nav ul {
   flex-wrap: wrap;
 }
 header nav li {
-  padding: 0 0.5rem;
+  padding: 0 0.3rem;
 }
 header nav li a {
   display: block;
@@ -182,7 +185,7 @@ header nav li a::after {
   transition-property: left, right;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 0.15s;
-  --tw-content: "";
+  --tw-content: '';
   content: var(--tw-content);
 }
 
