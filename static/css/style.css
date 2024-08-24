@@ -202,6 +202,14 @@ header nav li a.active:after {
   left: 0.5rem;
   right: 0.5rem;
 }
+@media (max-width: 640px) {
+	header nav {
+  font-size: 0.75rem;
+}
+header nav li {
+  padding: 0 0.3rem;
+}
+}
 
 /* article list */
 .post_list article {
