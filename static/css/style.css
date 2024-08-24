@@ -145,16 +145,20 @@ header li {
   .bio {
     font-size: 0.75rem;
   }
-}
-
-header nav {
+	header nav {
   font-size: 0.75rem;
 }
+header nav li {
+  padding: 0 0.3rem;
+}
+}
+
+
 header nav ul {
   flex-wrap: wrap;
 }
 header nav li {
-  padding: 0 0.3rem;
+  padding: 0 0.75rem;
 }
 header nav li a {
   display: block;
